@@ -3,23 +3,47 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Background="#ff292929"
         xmlns:local="clr-namespace:AgendaCrud"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Agenda" Height="600" Width="800">
     <Grid Loaded="WindowLoaded">
-        <Label     Content="ID"          HorizontalAlignment="Left" Margin="100,30,0,0" VerticalAlignment="Top"/>
-        <Label     Content="NOME"        HorizontalAlignment="Left" Margin="100,60,0,0" VerticalAlignment="Top"/>
-        <Label     Content="TELEFONE"    HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textID"       HorizontalAlignment="Left" Margin="200,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textNome"     HorizontalAlignment="Left" Margin="200,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288"/>
-        <TextBox x:Name="textTelefone" HorizontalAlignment="Left" Margin="200,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299"/>
-        <Button    x:Name="btnCancelar"   Content="CANCELAR"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="600,161,0,0" Click="btnCancelar_Click" IsEnabled="False"/>
-        <Button    x:Name="btnInserir"   Content="INSERIR"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="500,161,0,0" Click="btnInserir_Click"/>
-        <Button    x:Name="btnAlterar"   Content="ALTERAR"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="200,161,0,0" Click="btnAlterar_Click" IsEnabled="False"/>
-        <Button    x:Name="btnLocalizar" Content="LOCALIZAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="300,161,0,0" Click="btnLocalizar_Click"/>
-        <Button    x:Name="btnExcluir"    Content="EXCLUIR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="400,161,0,0" IsEnabled="False" Click="btnExcluir_Click"/>
-        <Button    x:Name="btnSalvar"   Content="SALVAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="65" Margin="100,161,0,0" Click="btnSalvar_Click" IsEnabled="False" />
-        <DataGrid x:Name="dgvDados" HorizontalAlignment="Left" Margin="10,242,0,41.4" Width="758" IsReadOnly="True"  SelectionMode="Single" MouseDoubleClick="GridDoubleClick"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label     Content="ID"          HorizontalAlignment="Left" Margin="100,30,0,0" VerticalAlignment="Top"/>
+                <Label     Content="NOME"        HorizontalAlignment="Left" Margin="100,60,0,0" VerticalAlignment="Top"/>
+                <Label     Content="TELEFONE"    HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textID"       Foreground="White" HorizontalAlignment="Left" Margin="200,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                <TextBox x:Name="textNome"     Foreground="White" HorizontalAlignment="Left" Margin="200,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288"/>
+                <TextBox x:Name="textTelefone" Foreground="White" HorizontalAlignment="Left" Margin="200,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299"/>
+            </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="125" />
+                    
+                </Grid.ColumnDefinitions> 
+
+                    <Button Grid.Column="0"   x:Name="btnInserir"   Content="INSERIR"  Height="AUTO" Margin="10 0 0 0" Click="btnInserir_Click"/>
+                    <Button  Grid.Column="1"  x:Name="btnAlterar"   Content="ALTERAR"   Height="AUTO" Margin="10 0 0 0" Click="btnAlterar_Click" IsEnabled="False"/>
+                <Button Grid.Column="2"   x:Name="btnLocalizar" Content="LOCALIZAR" Height="AUTO" Margin="10 0 0 0" Click="btnLocalizar_Click"/>
+                <Button Grid.Column="3"   x:Name="btnExcluir"   Content="EXCLUIR" Height="AUTO" Margin="10 0 0 0" IsEnabled="False" Click="btnExcluir_Click"/>
+                <Button  Grid.Column="4"  x:Name="btnSalvar"    Content="SALVAR" Height="AUTO" Margin="10 0 0 0" Click="btnSalvar_Click" IsEnabled="False" />
+                <Button Grid.Column="5"   x:Name="btnCancelar"  Content="CANCELAR"   Height="AUTO" Margin="10 0 0 0" Click="btnCancelar_Click" IsEnabled="False"/>
+
+            </Grid>
+        </Grid>
+        <DataGrid Grid.Row="2" x:Name="dgvDados" HorizontalAlignment="Left" Margin="10" Width="758" IsReadOnly="True"  SelectionMode="Single" MouseDoubleClick="GridDoubleClick"/>
 
     </Grid>
 </Window>

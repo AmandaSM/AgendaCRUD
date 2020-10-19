@@ -27,3 +27,9 @@ C:\Users\Fenix\source\repos\AgendaCrud\obj\Debug\AgendaCrud.csproj.CoreCompileIn
 C:\Users\Fenix\source\repos\AgendaCrud\obj\Debug\AgendaCrud.csproj.CopyComplete
 C:\Users\Fenix\source\repos\AgendaCrud\obj\Debug\AgendaCrud.exe
 C:\Users\Fenix\source\repos\AgendaCrud\obj\Debug\AgendaCrud.pdb
+C:\Users\Fenix\source\repos\AgendaCrud\bin\Debug\MaterialDesignColors.dll
+C:\Users\Fenix\source\repos\AgendaCrud\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Fenix\source\repos\AgendaCrud\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Fenix\source\repos\AgendaCrud\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Fenix\source\repos\AgendaCrud\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Fenix\source\repos\AgendaCrud\obj\Debug\App.baml
